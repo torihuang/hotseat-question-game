@@ -8,12 +8,16 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
   <script src="/js/session.js"></script>
+  <script src="/js/user.js"></script>
 
   <title>Hotseat</title>
 </head>
 <body>
   <header>
-    <h1 id='logo'><a href='/'>Hot Seat</a></h1>
+    <h1 id='logo'>
+      <img src='/imgs/fire.jpg'>
+      <a href='/'>Hot Seat</a>
+    </h1>
     <nav>
       <% if logged_in? %>
         <a href='/users/<%= current_user.id %>'><%= current_user.username %></a>
