@@ -1,16 +1,31 @@
+@font-face {
+  font-family: pandora;
+  src: url('/fonts/pandoralimiter_teabeer.ttf');
+}
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
+a {
+  color: #d64127;
+}
+
+a:hover {
+  color: black;
+}
+
 header {
-  border: 1px solid black;
+  border-bottom: 2px solid black;
   width: 100%;
-  height: 100px;
+  /*height: 100px;*/
   padding-left: 20px;
   overflow: auto;
   position: relative;
+  font-size: 30px;
+  font-family: pandora;
 }
 
 header a {
@@ -18,13 +33,35 @@ header a {
 }
 
 #logo {
+  margin: 0px;
   width: 400px;
   float: left;
   font-size: 50px;
+  /*border: 1px solid black;*/
+  overflow: auto;
+  position: relative;
+  text-align: center;
+}
+
+#logo img {
+  margin: auto 0px;
+  width: 100px;
+  /*border: 1px solid black;*/
+  position: relative;
+}
+
+#logo a {
+  margin-left: 0px;
+  margin-top: 0px;
+  /*border: 1px solid black;*/
+  position: relative;
+  top: -40px;
+  left: -10px;
+  color: #d64127;
 }
 
 nav {
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   margin-top: 70px;
   margin-left: 400px;
   padding-right: 20px;
@@ -64,4 +101,28 @@ form input[type=submit] {
   display: block;
   border-radius: 5px;
   margin: 10px auto;
+}
+
+#scroll-bar {
+  margin: 20px auto;
+  width: 60%;
+}
+
+#scroll-bar img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+#intro {
+  margin: 20px auto;
+  text-align: center;
+  width: 70%;
+}
+
+#intro h2 {
+  font-size: 30px;
+}
+
+#intro p {
+  font-size: 20px;
 }
