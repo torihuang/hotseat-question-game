@@ -21,7 +21,7 @@
     </h1>
     <nav>
       <% if logged_in? %>
-        <a href='/users/<%= current_user.id %>' class='session'><%= current_user.username %></a>
+        <a href='/users/<%= current_user.id %>'><%= current_user.username %></a>
         <a href='/logout' class='session'>logout</a>
       <% else %>
         <a href='/login' class='session'>login</a>
