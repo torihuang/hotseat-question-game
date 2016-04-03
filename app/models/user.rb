@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
   has_many :games, class_name: 'Game', foreign_key: :creator_id
   has_many :questions, through: :games
 
+  validates :username, :email, uniqueness: true, presence: true
+
   def password
     @password ||= BCrypt::Password.new(self.encrypted_password)
   end

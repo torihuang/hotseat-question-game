@@ -21,11 +21,11 @@
     </h1>
     <nav>
       <% if logged_in? %>
-        <a href='/users/<%= current_user.id %>'><%= current_user.username %></a>
-        <a href='/logout'>logout</a>
+        <a href='/users/<%= current_user.id %>' class='session'><%= current_user.username %></a>
+        <a href='/logout' class='session'>logout</a>
       <% else %>
-        <a href='/login'>login</a>
-        <a href='/users/new'>sign up</a>
+        <a href='/login' class='session'>login</a>
+        <a href='/users/new' class='session'>sign up</a>
       <% end %>
       <a href='/games' id='new-game-button'>Create a New Game!</a>
   </header>

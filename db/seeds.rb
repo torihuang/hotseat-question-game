@@ -3,16 +3,16 @@
 end
 
 20.times do
-  Game.create(title: Faker::Book.title, topic_name: Faker::Book.genre, responder_name: Faker::Name.name, creator: User.all.to_a.sample)
+  Game.create(title: Faker::Book.title, responder_name: Faker::Name.name, creator: User.all.to_a.sample)
 end
 
 200.times do
   Question.create(query: Faker::Hipster.sentence, answer: Faker::Hipster.sentence, game: Game.all.to_a.sample)
 end
 
-family_game_night = Game.create(title: "Family Game Night", topic_name: "Family", creator_id: -1)
-bachelorette_party = Game.create(title: "Bachelorette Party", topic_name: "Bachelorette Party", creator_id: -1)
-bachelor_party = Game.create(title: "Bachelor Party", topic_name: "Bachelor Party", creator_id: -1)
+family_game_night = Game.create(title: "Family Game Night", creator_id: -1)
+bachelorette_party = Game.create(title: "Bachelorette Party", creator_id: -1)
+bachelor_party = Game.create(title: "Bachelor Party", creator_id: -1)
 
 Question.create(query: "Where did you first meet?", game: bachelorette_party)
 Question.create(query: "What do you love most about her?", game: bachelorette_party)

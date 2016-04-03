@@ -1,0 +1,19 @@
+<h1>HotSeat</h1>
+
+<form action='/games' method='post' id='new-game-form'>
+
+  <input type='text' name='title', placeholder='Game Title'>
+
+<% count = 1 %>
+
+<% if @questions %>
+  <% @questions.each do |question| %>
+    <input type='text' name='question_<%= count %>' value='<%= question.query %>'>
+    <% count += 1 %>
+  <% end %>
+<% end %>
+
+<input type='text' name='question_<% count %>' placeholder='New Question'>
+<% count += 1 %>
+<input type='submit' name='new-game-submit' value='Make My Game!'>
+</form>

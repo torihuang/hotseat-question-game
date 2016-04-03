@@ -31,7 +31,7 @@ $(document).ready(function(){
     }
   }
 
-  $('header').on('click', 'a', function(e) {
+  $('header').on('click', '.session', function(e) {
     e.preventDefault();
     var $this = $(this);
     var url = $this.attr('href');
@@ -54,6 +54,9 @@ $(document).ready(function(){
       }
       else if (url == '/users/new') {
         newUserForm(response);
+      }
+      else {
+        window.location.replace('/');
       }
     })
   })
