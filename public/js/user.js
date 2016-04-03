@@ -6,7 +6,7 @@ $(document).ready(function() {
       $('#banner-image').remove();
       $('#scroll-bar').append(`<img src=${imgs[index]} id='banner-image'>`);
       index += 1;
-      if (index > imgs.length) {
+      if (index == imgs.length) {
         index = 0;
       }
     },10000);
