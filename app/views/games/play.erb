@@ -1,0 +1,9 @@
+<section id='game-screen'>
+  <h1 id='game-screen-hotseat'>HotSeat</h1>
+  <h2 id='game-screen-about'>Questions for <%= @game.title %> answered by <%= @game.responder_relation %> <%= @game.responder_name %></h2>
+  <a href='/' id='exit' style='display:none;'>exit</a>
+  <div id='play-button'>GO!
+    <input type='hidden' name='game_id' value='<%= @game.id %>'>
+  </div>
+  <span id='question-show' style='display:none;'></span>
+</section>

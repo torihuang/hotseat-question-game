@@ -1,6 +1,7 @@
+<section id='show-game-controls'>
 <h1><%= @game.title %></h1>
 <p>Copy this link, and send it to the person who you want to answer questions!</p>
-<a href='localhost:9393/games/<%= @game.url_key %>'>localhost:9393/games/<%= @game.url_key %></a>
+<a href='/games/<%= @game.id %>/<%= @game.url_key %>'>localhost:9393/games/<%= @game.id %>/<%= @game.url_key %></a>
 
 <form action='/games/<%= @game.id %>' method='post' id='delete-game'>
   <input type='hidden' name='_method' value='delete'>
@@ -10,3 +11,9 @@
 <form action='/games/<%= @game.id %>/edit' method='get' id='edit-game'>
   <input type='submit' name='edit' value='Edit'>
 </form>
+</section>
+
+<form action='/games/<%= @game.id %>/play' method='get' id='edit-game'>
+  <input type='submit' name='show' value='Play!'>
+</form>
+</section>

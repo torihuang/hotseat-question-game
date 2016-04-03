@@ -3,6 +3,7 @@ class CreateGames < ActiveRecord::Migration
     create_table :games do |t|
       t.string :title
       t.string :responder_name
+      t.string :responder_relation
       t.integer :creator_id
       t.string :url_key
 

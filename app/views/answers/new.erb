@@ -1,0 +1,20 @@
+<h2><%= @game.title %></h2>
+
+<form action='/games/<%= @game.id %>/answers' method='post' id='edit-game-form'>
+  <input type='hidden' name='_method' value='put'>
+  <input type='text' name='responder_name' placeholder='Your Name' value='<%= @game.responder_name %>'>
+  <input type='text' name='responder_relation' placeholder='Your Relation' value='<%= @game.responder_relation %>'>
+
+<% count = 1 %>
+
+<% if @questions %>
+  <% @questions.each do |question| %>
+    <label for='question_<%= question.id %>'><%= question.query %></label>
+
+    <input type='text' name='question_<%= question.id %>' value='<%= question.answer %>'>
+    <% count += 1 %>
+  <% end %>
+<% end %>
+
+<input type='submit' name='answers-submit' value='Submit'>
+</form>
