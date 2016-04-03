@@ -19,11 +19,11 @@ $(document).ready(function(){
     if (onQuestion) {
       $('#question-show').text(question.query);
       onQuestion = false;
-      currentQuestionIndex += 1;
     }
     else {
       $('#question-show').text(question.answer);
       onQuestion = true;
+      currentQuestionIndex += 1;
     }
   }
 

@@ -1,6 +1,7 @@
 <section id='show-game-controls'>
-<h1><%= @game.title %></h1>
-<p>Copy this link, and send it to the person who you want to answer questions!</p>
+<h2><%= @game.title %></h2>
+<h3>This game is for: <%= @game.topic_name %></h3>
+<p>Copy this link, and send it to <%= @game.responder_name %> so they can answer the questions about <%= @game.topic_name %>!</p>
 <a href='/games/<%= @game.id %>/<%= @game.url_key %>'>localhost:9393/games/<%= @game.id %>/<%= @game.url_key %></a>
 
 <form action='/games/<%= @game.id %>' method='post' id='delete-game'>

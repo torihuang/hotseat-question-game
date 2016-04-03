@@ -1,0 +1,9 @@
+<h2>Dashboard</h2>
+
+<section id='user-game-dashboard'>
+  <% @user.games.each do |game| %>
+    <section id='game-summary'>
+      <%= erb :'games/_summary', layout: false, locals: {game: game} %>
+    </section>
+  <% end %>
+</section>

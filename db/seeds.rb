@@ -3,7 +3,7 @@
 end
 
 20.times do
-  Game.create(title: Faker::Book.title, responder_name: Faker::Name.name, creator: User.all.to_a.sample)
+  Game.create(title: Faker::Book.title, responder_name: Faker::Name.name, creator: User.all.to_a.sample, topic_name: Faker::Name.name)
 end
 
 200.times do

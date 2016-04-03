@@ -1,0 +1,13 @@
+<a href='/games/<%= game.id %>'>
+  <h3><%= game.title %></h3>
+  <p>Questions: <%= game.questions.count %></p>
+  <p>Game for: <%= game.topic_name %></p>
+  <p>Responder: <%= game.responder_name %></p>
+  <p>Answered:
+    <% if game.questions.select {|question| question.answer == nil}.length == 0%>
+      Yes
+    <% else %>
+      No
+    <% end %>
+  </p>
+</a>

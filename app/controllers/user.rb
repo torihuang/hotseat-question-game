@@ -5,6 +5,16 @@ get '/users/new' do
   end
 end
 
+get '/users/:id' do
+  @user = User.find_by(id: params[:id])
+
+  if @user
+    erb :'users/show'
+  else
+    erb :'404'
+  end
+end
+
 post '/users' do
   user = User.new(params)
 

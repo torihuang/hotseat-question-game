@@ -13,7 +13,7 @@ get '/games/new' do
 end
 
 post '/games' do
-  game = Game.new(title: params[:title], creator: current_user)
+  game = Game.new(title: params[:title], creator: current_user, topic_name: params[:topic_name])
 
   if game.save
     params.each do |key, value|
