@@ -1,0 +1,18 @@
+<form action='/games/<%= @game.id %>' method='post' id='edit-game-form'>
+  <input type='hidden' name='_method' value='put'>
+
+  <input type='text' name='title', value='<%= @game.title %>'>
+
+<% count = 1 %>
+
+<% if @questions %>
+  <% @questions.each do |question| %>
+    <input type='text' name='question_<%= count %>' value='<%= question.query %>'>
+    <% count += 1 %>
+  <% end %>
+<% end %>
+
+<input type='text' name='question_<% count %>' placeholder='New Question'>
+<% count += 1 %>
+<input type='submit' name='update-game-submit' value='Udpate!'>
+</form>

@@ -1,0 +1,9 @@
+<h1>Select a Template or Start from Scratch!</h1>
+
+<section id='premade-game-form-section'>
+<% @premade_games.each do |game| %>
+  <%= erb :'games/_mini_game', layout: false, locals: {game_title: game.title, game_id: game.id} %>
+<% end %>
+</section>
+
+<a href='/games/new' id='new-game-from-scratch'>Start from Scratch</a>
